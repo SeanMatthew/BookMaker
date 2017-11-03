@@ -33,11 +33,6 @@ bool CaptionList::deleteCaption(Caption *caption)
     return false;
 }
 
-void CaptionList::setCaptions(const Captions &captions)
-{
-    m_captions = captions;
-}
-
 quint32 CaptionList::total_captions() const
 {
     return m_total_captions;

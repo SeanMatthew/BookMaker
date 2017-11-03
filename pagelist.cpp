@@ -10,7 +10,7 @@ PageList::Pages PageList::pages() const
     return m_pages;
 }
 
-Page PageList::createPage() const
+Page *PageList::createPage()
 {
     auto result = new Page(this);
     if (result != nullptr)
@@ -43,6 +43,48 @@ void PageList::settotal_pages(const quint32 &total_pages)
     if (m_total_pages != total_pages)
     {
         m_total_pages = total_pages;
-        emit total_pagesChanges();
+        emit total_pagesChanged();
+    }
+}
+
+QString PageList::title() const
+{
+    return m_title;
+}
+
+void PageList::settitle(const QString &title)
+{
+    if (m_title != title)
+    {
+        m_title = title;
+        emit titleChanged();
+    }
+}
+
+QString PageList::author() const
+{
+    return m_author;
+}
+
+void PageList::setauthor(const QString &author)
+{
+    if (m_author != author)
+    {
+        m_author = author;
+        emit authorChanged();
+    }
+}
+
+QString PageList::description() const
+{
+    return m_description;
+}
+
+void PageList::setdescription(const QString &description)
+{
+    if (m_description != description)
+    {
+        m_description = description;
+        emit descriptionChanged();
     }
 }

@@ -2,6 +2,7 @@
 #define CAPTION_H
 
 #include <QObject>
+#include <QString>
 #include <QFont>
 
 struct Box
@@ -37,13 +38,13 @@ public:
     ~Caption();
 
     QString text() const;
-    void settext(const QString &text) const;
+    void settext(const QString &text);
     Box text_box_coordinates() const;
     void settext_box_coordinates(const Box &text_box_coordinates);
     QFont font() const;
     void setfont(const QFont &font);
     quint32 object_number() const;
-    void setobject_number(const quint32 object_number);
+    void setobject_number(const quint32 &object_number);
 
 signals:
     void textChanged();

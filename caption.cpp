@@ -15,7 +15,7 @@ QString Caption::text() const
     return m_text;
 }
 
-void Caption::settext(QString text) const
+void Caption::settext(const QString &text)
 {
     if (m_text != text)
     {
@@ -29,7 +29,7 @@ Box Caption::text_box_coordinates() const
     return m_text_box_coordinates;
 }
 
-void Caption::settext_box_coordinates(Box text_box_coordinates) const
+void Caption::settext_box_coordinates(const Box &text_box_coordinates)
 {
     bool change = false;
     if (m_text_box_coordinates.m_box_x1 !=
@@ -78,7 +78,7 @@ quint32 Caption::object_number() const
     return m_object_number;
 }
 
-void Caption::setobject_number(const quint32 object_number)
+void Caption::setobject_number(const quint32 &object_number)
 {
     if (m_object_number != object_number)
     {
@@ -87,7 +87,7 @@ void Caption::setobject_number(const quint32 object_number)
     }
 }
 
-void Caption::setfont(QFont font)
+void Caption::setfont(const QFont &font)
 {
     if (m_font != font)
     {

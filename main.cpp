@@ -2,8 +2,8 @@
 #include <QApplication>
 #include <QPalette>
 #include <QStyleFactory>
-#define WIDTH 640
-#define HEIGHT 480
+#define WIDTH 800
+#define HEIGHT 600
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

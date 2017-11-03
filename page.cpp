@@ -10,31 +10,87 @@ Page::~Page()
 
 }
 
-ImageList Page::images() const
+Page::Images Page::images() const
 {
     return m_images;
 }
 
-void Page::setimages(const ImageList &images)
-{ // Probably not right
-    if (m_images != images)
+ImageModel *Page::addImage()
+{
+    auto result = new ImageModel(this);
+    if (result != nullptr)
     {
-        m_images = images;
-        emit imagesChanged();
+        m_images.append(result);
+        emit imageAdded(result);
+    }
+    return result;
+}
+
+bool Page::deleteImage(ImageModel *image)
+{
+    if (m_images.contains(image))
+    {
+        emit imageRemoved(image);
+        m_images.removeOne(image);
+        delete image;
+        return true;
+    }
+    return false;
+}
+
+quint32 Page::total_images() const
+{
+    return m_total_images;
+}
+
+void Page::settotal_images(const quint32 &total_images)
+{
+    if (m_total_images != total_images)
+    {
+        m_total_images = total_images;
+        emit total_imagesChanged();
     }
 }
 
-CaptionList Page::captions() const
+Page::Captions Page::captions() const
 {
     return m_captions;
 }
 
-void Page::setcaptions(const CaptionList &captions)
-{ // Probably not right
-    if (m_captions != captions)
+Caption *Page::addCaption()
+{
+    auto result = new Caption(this);
+    if (result != nullptr)
     {
-        m_captions = captions;
-        emit captionsChanged();
+        m_captions.append(result);
+        emit captionAdded(result);
+    }
+    return result;
+}
+
+bool Page::deleteCaption(Caption *caption)
+{
+    if (m_captions.contains(caption))
+    {
+        emit captionRemoved(caption);
+        m_captions.removeOne(caption);
+        delete caption;
+        return true;
+    }
+    return false;
+}
+
+quint32 Page::total_captions() const
+{
+    return m_total_captions;
+}
+
+void Page::settotal_captions(const quint32 &total_captions)
+{
+    if (m_total_captions != total_captions)
+    {
+        m_total_captions = total_captions;
+        emit total_captionsChanged();
     }
 }
 

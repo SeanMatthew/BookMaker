@@ -1,13 +1,13 @@
 #include "captionlistcontroller.h"
 
-captionlistcontroller::captionlistcontroller(
+CaptionListController::CaptionListController(
         CaptionList *captions, QObject *parent) :
     QObject(parent), m_captions(captions)
 {
     Q_ASSERT(captions != nullptr);
 }
 
-CaptionList *captionlistcontroller::createCaption()
+Caption *CaptionListController::createCaption()
 {
     Box default_coordinates = {100, 400, 500, 500};
     QFont default_font("Times", 12, QFont::Bold);
@@ -24,7 +24,7 @@ CaptionList *captionlistcontroller::createCaption()
     return result;
 }
 
-bool captionlistcontroller::deleteCaption(Caption *caption)
+bool CaptionListController::deleteCaption(Caption *caption)
 {
     return m_captions->deleteCaption(caption);
 }

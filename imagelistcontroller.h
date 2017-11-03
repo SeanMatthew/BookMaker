@@ -9,9 +9,9 @@ class ImageListController : public QObject
     Q_OBJECT
 public:
     explicit ImageListController(
-            ImageList *images, QObject *parent = 0);
+            ImageList *image_list, QObject *parent = 0);
 
-    ImageList *addImage();
+    ImageModel *addImage();
     bool deleteImage(ImageModel *image);
 
 signals:

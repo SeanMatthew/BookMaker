@@ -4,14 +4,14 @@
 #include "captionlist.h"
 #include <QObject>
 
-class captionlistcontroller : public QObject
+class CaptionListController : public QObject
 {
     Q_OBJECT
 public:
-    explicit captionlistcontroller(
+    explicit CaptionListController(
             CaptionList *caption_list, QObject *parent = 0);
 
-    CaptionList *createCaption();
+    Caption *createCaption();
     bool deleteCaption(Caption *caption);
 
 signals:

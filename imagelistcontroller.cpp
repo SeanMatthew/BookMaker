@@ -2,12 +2,12 @@
 
 ImageListController::ImageListController(
         ImageList *image_list, QObject *parent) :
-    QObject(parent), m_images(images)
+    QObject(parent), m_images(image_list)
 {
     Q_ASSERT(image_list != nullptr);
 }
 
-ImageList *ImageListController::addImage()
+ImageModel *ImageListController::addImage()
 {
     auto result = m_images->addImage();
     if (result != nullptr)

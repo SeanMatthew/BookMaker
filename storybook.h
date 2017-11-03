@@ -12,10 +12,12 @@ public:
     ~StoryBook();
 
 signals:
+    void
 
 public slots:
 
 private:
+    PageList m_pagelist;
 
 };
 

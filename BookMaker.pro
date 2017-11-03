@@ -32,8 +32,7 @@ SOURCES += \
     captionlist.cpp \
     captionlistcontroller.cpp \
     pagelist.cpp \
-    pagelistcontroller.cpp \
-    storybook.cpp
+    pagelistcontroller.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -45,8 +44,10 @@ HEADERS += \
     captionlist.h \
     captionlistcontroller.h \
     pagelist.h \
-    pagelistcontroller.h \
-    storybook.h
+    pagelistcontroller.h
 
 FORMS += \
         mainwindow.ui
+
+RESOURCES += \
+        app_images.qrc
