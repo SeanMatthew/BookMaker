@@ -10,18 +10,18 @@ ImageModel::~ImageModel()
 
 }
 
-QImage ImageModel::image() const
+QPixmap ImageModel::image() const
 {
     return m_image;
 }
 
-void ImageModel::setimage(const QImage &image)
+void ImageModel::setimage(const QPixmap &image)
 {
-    if (m_image != image)
-    {
-        m_image = image;
-        emit imageChanged();
-    }
+    //if (m_image != image)
+    //{
+     //   m_image = image;
+    //    emit imageChanged();
+    // }
 }
 
 QString ImageModel::filename() const

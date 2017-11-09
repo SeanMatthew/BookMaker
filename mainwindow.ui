@@ -42,6 +42,9 @@
       <height>571</height>
      </rect>
     </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
     <widget class="QWidget" name="page_Main">
      <widget class="Line" name="line_Vertical">
       <property name="geometry">
@@ -178,12 +181,15 @@
       </property>
      </widget>
      <widget class="QLabel" name="label_MainPicture">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>0</y>
-        <width>691</width>
-        <height>571</height>
+        <x>100</x>
+        <y>10</y>
+        <width>681</width>
+        <height>561</height>
        </rect>
       </property>
       <property name="text">
@@ -191,7 +197,1006 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2"/>
+    <widget class="QWidget" name="page_StoryBook">
+     <widget class="QLabel" name="label_Background">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>640</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="Line" name="line_horizonal">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>10</y>
+        <width>652</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_vertical">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>12</y>
+        <width>20</width>
+        <height>492</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_AddImage">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Insert Image</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_AddTextbox">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>80</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Insert Textbox</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_NextPage">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>430</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Next Page</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_PreviousPage">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>470</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Previous Page</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_DeletePage">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>390</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Delete Page</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Finish">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>350</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Add Page</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_PositionX">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>515</y>
+        <width>70</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Position X:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Rotate">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>515</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Rotate CCW:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_PositionY">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>536</y>
+        <width>70</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Position Y:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Scale">
+      <property name="geometry">
+       <rect>
+        <x>155</x>
+        <y>536</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Scale:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_X">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>515</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Y">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>538</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_X100">
+      <property name="geometry">
+       <rect>
+        <x>91</x>
+        <y>4</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>100</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X100">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>13</y>
+        <width>1</width>
+        <height>7</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_Y100">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>110</y>
+        <width>7</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Y100">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>95</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>100</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Y">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>-4</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_X">
+      <property name="geometry">
+       <rect>
+        <x>4</x>
+        <y>11</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Rotate">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>515</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Scale">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>538</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X200">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>13</y>
+        <width>1</width>
+        <height>7</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X300">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>13</y>
+        <width>1</width>
+        <height>7</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X400">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>13</y>
+        <width>1</width>
+        <height>7</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X500">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>13</y>
+        <width>1</width>
+        <height>7</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X600">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>13</y>
+        <width>1</width>
+        <height>7</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_Y200">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>210</y>
+        <width>7</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_Y300">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>310</y>
+        <width>7</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_Y400">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>410</y>
+        <width>7</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_X200">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>4</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_X300">
+      <property name="geometry">
+       <rect>
+        <x>291</x>
+        <y>4</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>300</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_X400">
+      <property name="geometry">
+       <rect>
+        <x>391</x>
+        <y>4</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>400</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_X500">
+      <property name="geometry">
+       <rect>
+        <x>491</x>
+        <y>4</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>500</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_X600">
+      <property name="geometry">
+       <rect>
+        <x>591</x>
+        <y>4</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>600</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Y200">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>195</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Y300">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>295</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>300</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Y400">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>395</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>400</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Length">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>515</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Length:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Width">
+      <property name="geometry">
+       <rect>
+        <x>264</x>
+        <y>536</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Width:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Length">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>515</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Width">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>538</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Font">
+      <property name="geometry">
+       <rect>
+        <x>385</x>
+        <y>536</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Font:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Text">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>515</y>
+        <width>250</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Text">
+      <property name="geometry">
+       <rect>
+        <x>385</x>
+        <y>515</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Text:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QFontComboBox" name="fontComboBox">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>538</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Size">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>515</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Size:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Size">
+      <property name="geometry">
+       <rect>
+        <x>715</x>
+        <y>515</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_Bolt">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>540</y>
+        <width>51</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Bold</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_Italics">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>540</y>
+        <width>61</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Italics</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_Underline">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>540</y>
+        <width>81</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Underline</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_Order">
+      <property name="geometry">
+       <rect>
+        <x>738</x>
+        <y>120</y>
+        <width>43</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Order">
+      <property name="geometry">
+       <rect>
+        <x>673</x>
+        <y>121</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Order #:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_PageNumber">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>10</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Page #1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="Line" name="line_Y100_Grid">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>640</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_Y200_Grid">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>210</y>
+        <width>640</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_Y300_Grid">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>310</y>
+        <width>640</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X200_Grid">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>1</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X500_Grid">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>20</y>
+        <width>1</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_Y400_Grid">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>410</y>
+        <width>640</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X400_Grid">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>20</y>
+        <width>1</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X600_Grid">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>20</y>
+        <width>1</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X100_Grid">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>1</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_X300_Grid">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>1</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>150</y>
+        <width>111</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -203,13 +1208,13 @@
      <height>20</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuNew">
+   <widget class="QMenu" name="menuStory">
     <property name="geometry">
      <rect>
-      <x>269</x>
+      <x>258</x>
       <y>99</y>
       <width>158</width>
-      <height>210</height>
+      <height>274</height>
      </rect>
     </property>
     <property name="font">
@@ -218,18 +1223,80 @@
      </font>
     </property>
     <property name="title">
-     <string>New</string>
+     <string>Book</string>
     </property>
-    <addaction name="actionNew"/>
+    <addaction name="actionNewStory"/>
     <addaction name="separator"/>
-    <addaction name="actionSave_2"/>
-    <addaction name="actionLoad_2"/>
-    <addaction name="actionDelete_2"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionEdit"/>
+    <addaction name="actionSaveStory"/>
+    <addaction name="actionLoadStory"/>
+    <addaction name="actionDeleteStory"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionExport"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
     <addaction name="actionQuit"/>
    </widget>
-   <addaction name="menuNew"/>
+   <widget class="QMenu" name="menuPage">
+    <property name="title">
+     <string>Page</string>
+    </property>
+    <addaction name="actionAdd_Page"/>
+    <addaction name="actionDelete_Page"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionNext_Page"/>
+    <addaction name="actionPrevious_Page"/>
+    <addaction name="actionJump_Page"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionMove_Next"/>
+    <addaction name="actionMove_Previous"/>
+    <addaction name="actionReplace_Page"/>
+   </widget>
+   <widget class="QMenu" name="menuItem">
+    <property name="title">
+     <string>Item</string>
+    </property>
+    <addaction name="actionInsert_Image"/>
+    <addaction name="actionInsert_Textbox"/>
+    <addaction name="actionDeletePage"/>
+    <addaction name="actionLock"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionScaleFARFull"/>
+    <addaction name="actionScaleFARFit"/>
+    <addaction name="actionScaleFull"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionMove_Up"/>
+    <addaction name="actionMove_Down"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionRestore_Default"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <addaction name="actionAdd_Gridlines"/>
+    <addaction name="actionRemove_Gridlines"/>
+   </widget>
+   <addaction name="menuStory"/>
+   <addaction name="menuPage"/>
+   <addaction name="menuItem"/>
+   <addaction name="menuWindow"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOption_1">
@@ -267,7 +1334,7 @@
     <string>Delete</string>
    </property>
   </action>
-  <action name="actionNew">
+  <action name="actionNewStory">
    <property name="text">
     <string>New</string>
    </property>
@@ -277,7 +1344,7 @@
     </font>
    </property>
   </action>
-  <action name="actionSave_2">
+  <action name="actionSaveStory">
    <property name="text">
     <string>Save</string>
    </property>
@@ -287,7 +1354,7 @@
     </font>
    </property>
   </action>
-  <action name="actionLoad_2">
+  <action name="actionLoadStory">
    <property name="text">
     <string>Load</string>
    </property>
@@ -297,7 +1364,7 @@
     </font>
    </property>
   </action>
-  <action name="actionDelete_2">
+  <action name="actionDeleteStory">
    <property name="text">
     <string>Delete</string>
    </property>
@@ -320,6 +1387,216 @@
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAdd_Page">
+   <property name="text">
+    <string>Insert</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionNext_Page">
+   <property name="text">
+    <string>Next</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionPrevious_Page">
+   <property name="text">
+    <string>Previous</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionJump_Page">
+   <property name="text">
+    <string>Jump...</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionDelete_Page">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionMove_Next">
+   <property name="text">
+    <string>Replace Next</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionMove_Previous">
+   <property name="text">
+    <string>Replace Previous</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionReplace_Page">
+   <property name="text">
+    <string>Replace...</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionInsert_Image">
+   <property name="text">
+    <string>Insert Image</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionInsert_Textbox">
+   <property name="text">
+    <string>Insert Textbox</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionDeletePage">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionScaleFARFull">
+   <property name="text">
+    <string>Scale Fixed Aspect Ratio Fullscreen</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionScaleFARFit">
+   <property name="text">
+    <string>Scale Fixed Aspect Ratio Fitscreen</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionLock">
+   <property name="text">
+    <string>Lock</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionScaleFull">
+   <property name="text">
+    <string>Scale Fullscreen</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionRestore_Default">
+   <property name="text">
+    <string>Restore Default</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionAdd_Gridlines">
+   <property name="text">
+    <string>Add Gridlines</string>
+   </property>
+  </action>
+  <action name="actionRemove_Gridlines">
+   <property name="text">
+    <string>Remove Gridlines</string>
+   </property>
+  </action>
+  <action name="actionMove_Up">
+   <property name="text">
+    <string>Move Up</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionMove_Down">
+   <property name="text">
+    <string>Move Down</string>
    </property>
    <property name="font">
     <font>

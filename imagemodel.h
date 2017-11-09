@@ -2,7 +2,7 @@
 #define IMAGEMODEL_H
 
 #include <QObject>
-#include <Qimage>
+#include <QPixmap>
 #include <QString>
 
 enum ImageType
@@ -24,10 +24,10 @@ class ImageModel : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QImage image
-               READ   image
-               WRITE  setimage
-               NOTIFY imageChanged)
+    Q_PROPERTY(QPixmap image
+               READ    image
+               WRITE   setimage
+               NOTIFY  imageChanged)
 
     Q_PROPERTY(QString filename
                READ    filename
@@ -62,8 +62,8 @@ public:
     explicit ImageModel(QObject *parent = 0);
     ~ImageModel();
 
-    QImage image() const;
-    void setimage(const QImage &image);
+    QPixmap image() const;
+    void setimage(const QPixmap &image);
 
     QString filename() const;
     void setfilename(const QString &filename);
@@ -96,7 +96,7 @@ public slots:
 
 private:
     QString m_filename, m_title, m_description;
-    QImage m_image;
+    QPixmap m_image;
     ImageType m_type;
     ImageTransforms m_transforms;
     quint32 m_object_number;

@@ -28,6 +28,7 @@ class PageList : public QObject
                READ    description
                WRITE   setdescription
                NOTIFY  descriptionChanged)
+
 public:
     typedef QList<Page*> Pages;
     explicit PageList(QObject *parent = 0);
@@ -62,7 +63,9 @@ public slots:
 private:
     Pages m_pages;
     quint32 m_total_pages = 0;
-    QString m_title, m_author, m_description;
+    QString m_title = "New Title",
+            m_author = "Me",
+            m_description = "This book is fun! (>^^)>";
 };
 
 #endif // PAGELIST_H

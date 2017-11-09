@@ -32,7 +32,9 @@ SOURCES += \
     captionlist.cpp \
     captionlistcontroller.cpp \
     pagelist.cpp \
-    pagelistcontroller.cpp
+    pagelistcontroller.cpp \
+    newstorydialog.cpp \
+    dialogareyousure.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -44,10 +46,14 @@ HEADERS += \
     captionlist.h \
     captionlistcontroller.h \
     pagelist.h \
-    pagelistcontroller.h
+    pagelistcontroller.h \
+    newstorydialog.h \
+    dialogareyousure.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    newstorydialog.ui \
+    dialogareyousure.ui
 
 RESOURCES += \
         app_images.qrc

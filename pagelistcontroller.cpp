@@ -22,3 +22,33 @@ bool PageListController::deletePage(Page *page)
 {
     return m_pagelist->deletePage(page);
 }
+
+QString PageListController::title()
+{
+    return m_pagelist->title();
+}
+
+void PageListController::settitle(QString title)
+{
+    m_pagelist->settitle(title);
+}
+
+QString PageListController::author()
+{
+    return m_pagelist->author();
+}
+
+void PageListController::setauthor(QString author)
+{
+    m_pagelist->setauthor(author);
+}
+
+QString PageListController::description()
+{
+    return m_pagelist->description();
+}
+
+void PageListController::setdescription(QString description)
+{
+    m_pagelist->setdescription(description);
+}

@@ -14,6 +14,15 @@ public:
     Page *createPage();
     bool deletePage(Page *page);
 
+    QString title();
+    void settitle(QString title);
+
+    QString author();
+    void setauthor(QString author);
+
+    QString description();
+    void setdescription(QString description);
+
 signals:
 
 public slots:
