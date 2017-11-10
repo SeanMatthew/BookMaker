@@ -17,11 +17,8 @@ QPixmap ImageModel::image() const
 
 void ImageModel::setimage(const QPixmap &image)
 {
-    //if (m_image != image)
-    //{
-     //   m_image = image;
-    //    emit imageChanged();
-    // }
+    m_image = QPixmap(image);
+    emit imageChanged();
 }
 
 QString ImageModel::filename() const

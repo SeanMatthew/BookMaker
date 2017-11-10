@@ -25,30 +25,24 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     imagemodel.cpp \
-    imagelist.cpp \
-    imagelistcontroller.cpp \
     page.cpp \
     caption.cpp \
-    captionlist.cpp \
-    captionlistcontroller.cpp \
     pagelist.cpp \
     pagelistcontroller.cpp \
     newstorydialog.cpp \
-    dialogareyousure.cpp
+    dialogareyousure.cpp \
+    pagecontroller.cpp
 
 HEADERS += \
         mainwindow.h \
     imagemodel.h \
-    imagelist.h \
-    imagelistcontroller.h \
     page.h \
     caption.h \
-    captionlist.h \
-    captionlistcontroller.h \
     pagelist.h \
     pagelistcontroller.h \
     newstorydialog.h \
-    dialogareyousure.h
+    dialogareyousure.h \
+    pagecontroller.h
 
 FORMS += \
         mainwindow.ui \

@@ -23,6 +23,8 @@
 #include <QTableWidget>
 #include <QTableWidgetItem>
 #include <QtWidgets>
+#define ORIGIN_X 20
+#define ORIGIN_y 20
 
 namespace Ui {
 class MainWindow;
@@ -52,18 +54,22 @@ public:
 public slots:
     void newStory();
     void quitToMain();
+    void editStory();
     void loadStory();
     void saveStory();
     void deleteStory();
     void aboutStory();
     void quitStory();
 
+    void insertImage();
+    void insertCaption();
+
     void showGrid();
     void removeGrid();
 
 private:
     Ui::MainWindow *ui_m;
-    Ui::NewStoryDialog *ui_n;
+    //Ui::NewStoryDialog *ui_n;
     PageListController *page_controller;
  //   CaptionListController *caption_controller;
   //  ImageListController *image_controller;

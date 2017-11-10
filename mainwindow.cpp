@@ -74,6 +74,21 @@ void MainWindow::quitToMain()
     ui_m->stackedWidget->setCurrentWidget(ui_m->page_Main);
 }
 
+void MainWindow::editStory()
+{
+    NewStoryDialog bookdialog(page_controller);
+    bookdialog.setModal(true);
+    int dcode = bookdialog.exec();
+
+    if (dcode == QDialog::Accepted)
+    {
+        ui_m->stackedWidget->setCurrentWidget(ui_m->page_StoryBook);
+        MainWindow::setWindowTitle(
+        page_controller->title() + tr(" by ") +
+           page_controller->author());
+    }
+}
+
 void MainWindow::newStory()
 {
     NewStoryDialog bookdialog(page_controller);
@@ -85,6 +100,7 @@ void MainWindow::newStory()
         auto page = page_controller->createPage();
         if (page)
             page->setpage_number(1);
+        ui_m->label_PageNumber->setText(tr("Page #1"));
         ui_m->stackedWidget->setCurrentWidget(ui_m->page_StoryBook);
         MainWindow::setWindowTitle(
         page_controller->title() + tr(" by ") +
@@ -123,6 +139,16 @@ void MainWindow::quitStory()
     QCoreApplication::exit();
 }
 
+void MainWindow::insertImage()
+{
+
+}
+
+void MainWindow::insertCaption()
+{
+
+}
+
 void MainWindow::showGrid()
 {
     if (!m_grid)
@@ -158,6 +184,8 @@ void MainWindow::removeGrid()
     }
     m_grid = false;
 }
+
+
 
 /*void MainWindow::newStory()
 {

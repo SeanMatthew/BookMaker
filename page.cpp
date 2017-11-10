@@ -38,20 +38,6 @@ bool Page::deleteImage(ImageModel *image)
     return false;
 }
 
-quint32 Page::total_images() const
-{
-    return m_total_images;
-}
-
-void Page::settotal_images(const quint32 &total_images)
-{
-    if (m_total_images != total_images)
-    {
-        m_total_images = total_images;
-        emit total_imagesChanged();
-    }
-}
-
 Page::Captions Page::captions() const
 {
     return m_captions;
@@ -80,17 +66,17 @@ bool Page::deleteCaption(Caption *caption)
     return false;
 }
 
-quint32 Page::total_captions() const
+quint32 Page::total_items() const
 {
-    return m_total_captions;
+    return m_total_items;
 }
 
-void Page::settotal_captions(const quint32 &total_captions)
+void Page::settotal_items(const quint32 &total_items)
 {
-    if (m_total_captions != total_captions)
+    if (m_total_items != total_items)
     {
-        m_total_captions = total_captions;
-        emit total_captionsChanged();
+        m_total_items = total_items;
+        emit total_itemsChanged();
     }
 }
 

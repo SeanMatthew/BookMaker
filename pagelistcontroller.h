@@ -2,6 +2,8 @@
 #define PAGELISTCONTROLLER_H
 
 #include "pagelist.h"
+#include "imagemodel.h"
+#include "caption.h"
 #include <QObject>
 
 class PageListController : public QObject

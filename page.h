@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QFont>
+#include <QHash>
 #include "imagemodel.h"
 #include "caption.h"
 
@@ -34,14 +35,13 @@ public:
     Images images() const;
     ImageModel *addImage();
     bool deleteImage(ImageModel *image);
-    quint32 total_images() const;
-    void settotal_images(const quint32 &total_images);
 
     Captions captions() const;
     Caption *addCaption();
     bool deleteCaption(Caption *caption);
-    quint32 total_captions() const;
-    void settotal_captions(const quint32 &total_captions);
+
+    quint32 total_items() const;
+    void settotal_items(const quint32 &total_items);
 
     quint32 page_number() const;
     void setpage_number(const quint32 &page_number);
@@ -49,21 +49,22 @@ public:
 signals:
     void imageAdded(ImageModel *image);
     void imageRemoved(ImageModel *image);
-    void total_imagesChanged();
 
     void captionAdded(Caption *caption);
     void captionRemoved(Caption *caption);
-    void total_captionsChanged();
+
+    void total_itemsChanged();
 
     void page_numberChanged();
 
 public slots:
 
 private:
+    QHash<quint32, ImageModel*> m_imagemap;
+    QHash<quint32, Caption*> m_captionmap;
     Captions m_captions;
     Images m_images;
-    quint32 m_total_images = 0,
-            m_total_captions = 0,
+    quint32 m_total_items = 0,
             m_page_number;
 };
 
